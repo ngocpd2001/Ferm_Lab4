@@ -1,26 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import {Navbar,NavItem,Icon} from 'react-materialize';
+import React from "react";
+import { Icon, Navbar } from "react-materialize";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
-    <Navbar className='menu'
-    alignLinks="right"
-    brand={<span className='brand-logo'>FERCinema á </span>}
-    id="mobile-nav"
-    menuIcon={<Icon>Menu</Icon>}>
+    <Navbar
+      className="menu"
+      alignLinks="right"
+      brand={<span className="brand-logo">Cinema Ferm </span>}
+      id="mobile-nav"
+      menuIcon={<Icon>Menu</Icon>}
+    >
       <ul>
-        <li><Link to='/'><Icon left>home</Icon>Home</Link>
+        <li>
+          <Link to="/">
+            <Icon left>home</Icon>Home
+          </Link>
         </li>
-        <li><Link to="/features"><Icon left>settings</Icon>Features</Link>
+        <li>
+          <Link to="/features">
+            <Icon left>settings</Icon>Features
+          </Link>
         </li>
-        <li><Link to="/pricing"><Icon left>money</Icon>Pricing</Link>
+        <li>
+          <Link to="/pricing">
+            <Icon left>money</Icon>Pricing
+          </Link>
         </li>
-        <li><Link to="/news"><Icon left>newspaper</Icon>News</Link>
+        <li>
+          <Link to="/news">
+            <Icon left>newspaper</Icon>News
+          </Link>
         </li>
-        <li><Link to="/about"><Icon left>info_outline</Icon>About</Link>
+        <li>
+          <Link to="/about">
+            <Icon left>info_outline</Icon>About
+          </Link>
         </li>
-        <li><Link to="/contact"><Icon left>contacts</Icon>Contact</Link>
+        <li>
+          <Link to="/contact">
+            <Icon left>contacts</Icon>Contact
+          </Link>
         </li>
       </ul>
       {/* <div className="collapse navbar-collapse" id="navbarNav">
