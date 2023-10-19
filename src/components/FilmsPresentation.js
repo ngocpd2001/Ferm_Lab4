@@ -13,7 +13,7 @@ function useToggle(initialValue) {
 export default function FilmPresentation({ films }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedFilm, setSelectedFilm] = useState(null);
-  const [isDarkMode, toggleDarkMode] = useToggle(true);
+  const [isDarkMode, toggleDarkMode] = useToggle(false);
 
   function handleOpenModal(film) {
     setSelectedFilm(film);
@@ -31,7 +31,7 @@ export default function FilmPresentation({ films }) {
         <div className="row">
           <div className="d-flex justify-content-end mt-3">
             <button className="btn btn-danger " onClick={toggleDarkMode}>
-              {isDarkMode ? "Dark mode" : "Light mode"}
+              {isDarkMode ? "Light mode" : "Dark mode"}
             </button>
           </div>
           {films.map((film) => (
